@@ -31,7 +31,7 @@ class String
     self.each_char.with_index do |char, i|
       if char == "." &&  self[i - 1] != "."
         count += 1 
-      elsif char == "!"
+      elsif char == "!" && self[i - 1] != "!"
         count += 1 
       elsif char == "?"
         count += 1 
