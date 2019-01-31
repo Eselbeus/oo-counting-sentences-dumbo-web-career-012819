@@ -29,9 +29,9 @@ class String
   def count_sentences
     count = 0 
     self.each_char.with_index do |char, i|
-      if char == "." &&  self[i - 1] == /\w/
+      if char == "." &&  self[i - 1] == /[a-zA-Z]/
         count += 1 
-      elsif char == "!" && self[i - 1] == /\w/
+      elsif char == "!" && self[i - 1] == /a-zA-Z/
         count += 1 
       elsif char == "?"
         count += 1 
